@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 import {MantineProvider, ColorSchemeScript, createTheme} from '@mantine/core';
+import {Header} from "@/components/Header/header";
 
 export const metadata = {
   title: 'Stevens M&T',
@@ -18,7 +19,10 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
           <ColorSchemeScript />
         </head>
         <body>
-          <MantineProvider defaultColorScheme="dark" theme={theme}>{children}</MantineProvider>
+          <MantineProvider defaultColorScheme="dark" theme={theme}>
+              <Header />
+              {children}
+          </MantineProvider>
         </body>
       </html>
   )
