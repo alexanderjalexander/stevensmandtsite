@@ -1,3 +1,9 @@
 export default function Page() {
- return(<>Studio Booking</>)
+    return (
+        <main>
+            <div>
+                <h1>Studio Bookings</h1>
+            </div>
+        </main>
+    )
 }

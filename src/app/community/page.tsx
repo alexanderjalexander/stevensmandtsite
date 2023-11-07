@@ -1,3 +1,9 @@
 export default function Page() {
- return(<>Community</>)
+    return (
+        <main>
+            <div>
+                <h1>Community</h1>
+            </div>
+        </main>
+    )
 }

@@ -1,3 +1,9 @@
 export default function Page() {
- return(<>About</>)
+    return (
+        <main>
+            <div>
+                <h1>About</h1>
+            </div>
+        </main>
+    )
 }
