@@ -1,0 +1,17 @@
+.footer_base {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    justify-content: space-around;
+    margin: auto;
+    padding: 16px 0;
+    width: 100%;
+    max-width: 100%;
+    background-color: #191528;
+}
+
+.footer_link {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
