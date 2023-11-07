@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 import {MantineProvider, ColorSchemeScript, createTheme} from '@mantine/core';
 import {Header} from "@/components/Header/header";
+import {Footer} from "@/components/Footer/footer";
 
 export const metadata = {
   title: 'Stevens M&T',
@@ -23,6 +24,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
           <MantineProvider defaultColorScheme="dark" theme={theme}>
               <Header />
               {children}
+              <Footer />
           </MantineProvider>
         </body>
       </html>
