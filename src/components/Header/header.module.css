@@ -1,3 +1,50 @@
 .logo {
     margin: auto;
 }
+
+.header {
+    max-width: var(--maxw);
+    margin: auto;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header_content {
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-content: center;
+}
+
+.links {
+    text-decoration: none;
+    text-decoration-color: white;
+    color: white;
+    margin: auto;
+    padding: 5px;
+}
+
+.links_container {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    align-content: center;
+}
+
+.autocomplete {
+    background-color: #fff0;
+    text-decoration-color: white;
+    opacity: 1;
+    color: white;
+    margin: auto;
+}
+
+.input {
+    background-color: #fff0;
+    text-decoration-color: white;
+    color: white;
+}

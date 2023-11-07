@@ -1,4 +1,5 @@
 import '@mantine/core/styles.css'
+import './globals.css'
 import { theme } from '../../theme';
 import { Inter } from 'next/font/google'
 

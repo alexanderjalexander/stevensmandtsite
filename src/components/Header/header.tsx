@@ -1,7 +1,3 @@
-"use client"
-// TODO: Figure out why the use client is required and how to bypass
-import { Autocomplete, Group, Burger, rem } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
 import Link from "next/link";
 import styles from "./header.module.css"
 
@@ -14,26 +10,18 @@ const links = [
 ];
 
 export function Header() {
-    const [opened, { toggle }] = useDisclosure(false);
-
     const items = links.map((link) => (
-        <Link href={link.link} key={link.label}> {link.label} </Link>
+        <Link href={link.link} key={link.label} className={styles.links}> {link.label} </Link>
     ));
 
     return (
-        <div>
-            <Group justify="space-around">
-                <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
-                <h2 text-decoration="none"><Link href="/">M&T</Link></h2>
-                <Group ml={50} gap={5} visibleFrom="sm">
+        <div className={styles.header}>
+            <div className={styles.header_content}>
+                <h2><Link className={styles.links} href="/">M&T | SIT</Link></h2>
+                <div className={styles.links_container}>
                     {items}
-                </Group>
-                <Autocomplete
-                    placeholder="Search"
-                    data={['Booking']}
-                    visibleFrom="xs"
-                />
-            </Group>
+                </div>
+            </div>
         </div>
     );
 }
