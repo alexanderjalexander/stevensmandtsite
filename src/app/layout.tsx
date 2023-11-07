@@ -1,18 +1,18 @@
 import '@mantine/core/styles.css'
 import './globals.css'
 import { theme } from '../../theme';
-import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
-
-import {MantineProvider, ColorSchemeScript, createTheme} from '@mantine/core';
+import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import {Header} from "@/components/Header/header";
 import {Footer} from "@/components/Footer/footer";
+import React from "react";
 
 export const metadata = {
   title: 'Stevens M&T',
   description: 'The hub for everything Stevens Music & Tech',
 };
+
+
 
 export default function RootLayout({children}: { children: React.ReactNode }) {
   return (
