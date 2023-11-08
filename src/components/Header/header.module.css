@@ -3,7 +3,7 @@
 }
 
 .header {
-    max-width: var(--maxw);
+    /*max-width: var(--maxw);*/
     margin: auto;
     position: fixed;
     width: 100%;
@@ -20,6 +20,15 @@
     align-content: center;
 }
 
+.home_link {
+    text-decoration: none;
+    text-decoration-color: white;
+    color: white;
+    margin-right: auto;
+    display: flex;
+    align-self: flex-start;
+}
+
 .links {
     text-decoration: none;
     text-decoration-color: white;
@@ -31,9 +40,10 @@
 .links_container {
     display: flex;
     justify-content: space-between;
-    flex-grow: 1;
+    flex-grow: 0;
     align-content: center;
-    padding: 0 15%;
+    margin-right: auto;
+    /*padding: 0 10%;*/
 }
 
 .autocomplete {

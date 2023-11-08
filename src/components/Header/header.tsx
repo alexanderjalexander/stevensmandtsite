@@ -15,11 +15,12 @@ export function Header() {
         <Link href={link.link} key={link.label} className={styles.links}> {link.label} </Link>
     ));
 
+    // TODO: Implement hamburger menu at some point with all the resources as well
     return (
         <div className={styles.header}>
             <div className={styles.header_content}>
-                <h2><Link className={styles.links} href="/">M&T | SIT</Link></h2>
-                <div className={styles.links_container}>
+                <Link  className={styles.home_link} href="/"><h2>M&T | SIT</h2></Link>
+                <div className={styles.links_container} hidden={false}>
                     {items}
                 </div>
             </div>
