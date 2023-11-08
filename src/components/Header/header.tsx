@@ -6,6 +6,7 @@ const links = [
     { link: '/studiobooking', label: 'Studio Booking' },
     { link: '/community', label: 'Community' },
     { link: '/directory', label: 'Directory' },
+    { link: '/resources', label: 'Resources' },
     { link: '/about', label: 'About' },
 ];
 

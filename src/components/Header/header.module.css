@@ -33,6 +33,7 @@
     justify-content: space-between;
     flex-grow: 1;
     align-content: center;
+    padding: 0 15%;
 }
 
 .autocomplete {
