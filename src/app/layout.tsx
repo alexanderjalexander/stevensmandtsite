@@ -3,9 +3,12 @@ import './globals.css'
 import { theme } from '../../theme';
 
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
-import {Header} from "@/components/Header/header";
-import {Footer} from "@/components/Footer/footer";
+import { Header } from "@/components/Header/header";
+import { Footer } from "@/components/Footer/footer";
 import React from "react";
+
+import { Figtree } from 'next/font/google'
+const figtree = Figtree({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Stevens M&T',
@@ -20,7 +23,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
         <head>
           <ColorSchemeScript />
         </head>
-        <body>
+        <body className={figtree.className}>
           <MantineProvider defaultColorScheme="dark" theme={theme}>
               <Header />
               {children}
