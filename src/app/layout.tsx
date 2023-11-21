@@ -15,8 +15,6 @@ export const metadata = {
   description: 'The hub for everything Stevens Music & Tech',
 };
 
-
-
 export default function RootLayout({children}: { children: React.ReactNode }) {
   return (
       <html lang="en">
