@@ -72,32 +72,6 @@ function OpportunityCard({image, name, desc, time, date, location}: OpportunityC
                 {desc}
             </Text>
         </Card>
-        // <Paper
-        //     shadow="md"
-        //     p="xl"
-        //     radius="lg"
-        //     style={{ backgroundImage: `url(${image})` }}
-        //     className={classes.card}>
-        //     <div>
-        //         <Text className={classes.category} size="xs">
-        //             {time} | {date} | {location}
-        //         </Text>
-        //         <Title order={3} className={classes.title}>
-        //             {name}
-        //         </Title>
-        //         <Text className={classes.category} size="xs">
-        //             {desc}
-        //         </Text>
-        //     </div>
-        // </Paper>
-        // <Carousel.Slide>
-        //     <img src={image}/>
-        //     <h3>{name}</h3>
-        //     <h3>{time}</h3>
-        //     <h3>{date}</h3>
-        //     <h3>{location}</h3>
-        //     <p>{desc}</p>
-        // </Carousel.Slide>
     )
 }
 
