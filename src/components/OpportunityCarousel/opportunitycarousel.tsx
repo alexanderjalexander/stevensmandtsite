@@ -1,8 +1,10 @@
 "use client"
 
+import '@mantine/carousel/styles.css';
+import classes from './opportunitycarousel.module.css';
+
 import {Carousel} from "@mantine/carousel";
 import {Paper, Text, Title, useMantineTheme, rem, Card, Group, Flex} from '@mantine/core';
-import classes from './opportunitycarousel.module.css';
 import {useMediaQuery} from "@mantine/hooks";
 
 interface OpportunityCardProps {
@@ -43,20 +45,22 @@ function OpportunityCard({image, name, desc, time, date, location}: OpportunityC
                     style={{ backgroundImage: `url(${image})` }}
                     className={classes.card}>
 
-                    <Flex justify="center"
-                          align="center"
-                          direction="row"
-                          wrap="nowrap"
-                          mt="auto">
+                    <Flex justify="space-between"
+                           w="100%"
+                           align="flex-end"
+                           wrap="nowrap"
+                           mt="auto">
                         <Text className={classes.category} size="md">
                             {location}
                         </Text>
-                        <Text className={classes.category} size="md">
-                            {time}
-                        </Text>
-                        <Text className={classes.category} size="md">
-                            {date}
-                        </Text>
+                        <Flex direction="column" align="flex-end">
+                            <Text className={classes.category} size="md">
+                                {time}
+                            </Text>
+                            <Text className={classes.category} size="md">
+                                {date}
+                            </Text>
+                        </Flex>
                     </Flex>
 
                 </Paper>
@@ -108,7 +112,7 @@ export function OpportunityCardsCarousel() {
 
     return (
         <Carousel
-            slideSize={{base: '100%', sm: '50%'}}
+            slideSize={{base: '50%', sm: '50%'}}
             slideGap={{base: rem(2), sm: 'xl'}}
             align="start"
             withIndicators
