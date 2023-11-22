@@ -3,7 +3,7 @@ import './globals.css'
 import { theme } from '../../theme';
 
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
-import { Header } from "@/components/Header/header";
+import { Navbar } from "@/components/Header/navbar";
 import { Footer } from "@/components/Footer/footer";
 import React from "react";
 
@@ -23,7 +23,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
         </head>
         <body className={figtree.className}>
           <MantineProvider defaultColorScheme="dark" theme={theme}>
-              <Header />
+              <Navbar />
               {children}
               <Footer />
           </MantineProvider>
