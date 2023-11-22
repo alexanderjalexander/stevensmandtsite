@@ -1,8 +1,10 @@
 import {EventCardsCarousel, OpportunityCardsCarousel, ReleasesCardsCarousel} from "@/components/OpportunityCarousel/opportunitycarousel";
+import Header from "@/components/Header/header";
 
 export default function Page() {
     return (
         <main>
+            <Header text="Music & Tech" />
             <div>
                 <h1>Upcoming Events</h1>
                 <EventCardsCarousel />

@@ -1,0 +1,4 @@
+.header_text {
+    color: #03cba4;
+    font-size: min(100px, max(1rem, 10vw));
+}
