@@ -3,7 +3,7 @@ import './globals.css'
 import { theme } from '../../theme';
 
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
-import { Navbar } from "@/components/Header/navbar";
+import { Navbar } from "@/components/Navbar/navbar";
 import { Footer } from "@/components/Footer/footer";
 import React from "react";
 
