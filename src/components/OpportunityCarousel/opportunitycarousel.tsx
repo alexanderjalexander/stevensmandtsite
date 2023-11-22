@@ -8,6 +8,9 @@ import {Paper, Text, Image, Title, useMantineTheme, rem, Card, Flex, Button} fro
 import {useMediaQuery} from "@mantine/hooks";
 import Link from "next/link";
 
+// TODO: Implement Google Sheets API or some database of the sort to control events/opportunities/artists
+// --> USE VERCEL ENVIRONMENT VARIABLES FOR API KEYS
+
 const events = [
     {
         image: 'https://www.cnet.com/a/img/resize/20d6844768bd3f5f0df41deee97897423bcaf3c5/hub/2021/11/03/3c2a7d79-770e-4cfa-9847-66b3901fb5d7/c09.jpg?auto=webp&fit=crop&height=1200&width=1200',
