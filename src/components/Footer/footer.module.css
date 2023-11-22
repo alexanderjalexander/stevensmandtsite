@@ -1,6 +1,6 @@
 .footer_base {
     display: flex;
-    position: absolute;
+    position: static;
     bottom: 0;
     justify-content: space-around;
     margin: auto;
