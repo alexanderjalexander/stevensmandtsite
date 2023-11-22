@@ -20,7 +20,8 @@ const myColor: MantineColorsTuple = [
 export const theme = createTheme({
     /* Put your theme override here */
     // TODO: Figure out changing background color via Mantine
+    primaryColor: 'site-theme',
     colors: {
-        myColor
+        'site-theme': myColor
     },
 });
