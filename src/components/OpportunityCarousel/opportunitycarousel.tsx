@@ -4,7 +4,7 @@ import '@mantine/carousel/styles.css';
 import classes from './opportunitycarousel.module.css';
 
 import {Carousel} from "@mantine/carousel";
-import {Paper, Text, Title, useMantineTheme, rem, Card, Group, Flex} from '@mantine/core';
+import {Paper, Text, Title, useMantineTheme, rem, Card, Flex} from '@mantine/core';
 import {useMediaQuery} from "@mantine/hooks";
 
 interface OpportunityCardProps {
@@ -16,7 +16,7 @@ interface OpportunityCardProps {
     location: string
 }
 
-const data = [
+const events = [
     {
         image: 'https://www.cnet.com/a/img/resize/20d6844768bd3f5f0df41deee97897423bcaf3c5/hub/2021/11/03/3c2a7d79-770e-4cfa-9847-66b3901fb5d7/c09.jpg?auto=webp&fit=crop&height=1200&width=1200',
         name: 'THING',
@@ -35,9 +35,9 @@ const data = [
     }
 ]
 
-function OpportunityCard({image, name, desc, time, date, location}: OpportunityCardProps) {
+function EventCard({image, name, desc, time, date, location}: OpportunityCardProps) {
     return (
-        <Card shadow="md" radius="lg" withBorder padding="xl">
+        <Card bg="#564f70" shadow="md" radius="lg" padding="lg">
             <Card.Section>
                 <Paper
                     p="xl"
@@ -75,21 +75,21 @@ function OpportunityCard({image, name, desc, time, date, location}: OpportunityC
     )
 }
 
-export function OpportunityCardsCarousel() {
+export function EventCardsCarousel() {
     const theme = useMantineTheme();
     const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
-    const slides = data.map((item) => (
+    const slides = events.map((item) => (
         <Carousel.Slide key={item.name}>
-            <OpportunityCard {...item} />
+            <EventCard {...item} />
         </Carousel.Slide>
     ));
 
     return (
         <Carousel
-            slideSize={{base: '50%', sm: '50%'}}
+            slideSize={{base: '25%', sm: '25%'}}
             slideGap={{base: rem(2), sm: 'xl'}}
-            align="start"
-            withIndicators
+            loop
+            align="center"
             slidesToScroll={mobile ? 1 : 2}
         >
             {slides}

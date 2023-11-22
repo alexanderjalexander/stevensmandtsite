@@ -1,11 +1,11 @@
-import {OpportunityCardsCarousel} from "@/components/OpportunityCarousel/opportunitycarousel";
+import {EventCardsCarousel} from "@/components/OpportunityCarousel/opportunitycarousel";
 
 export default function Page() {
     return (
         <main>
             <div>
                 <h1>Upcoming Events</h1>
-                <OpportunityCardsCarousel />
+                <EventCardsCarousel />
             </div>
 
             <div>
