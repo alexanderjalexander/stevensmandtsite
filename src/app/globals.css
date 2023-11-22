@@ -6,6 +6,7 @@ body {
 
 main {
   max-width: var(--maxw_body);
+  color: white;
   margin: auto;
   padding: 50px 0;
 }
