@@ -2,6 +2,7 @@ body {
   /*background-color: #2d283e;*/
   --maxw: min(90%, 1500px);
   --maxw_body: min(85%, 1300px);
+  --mantine-color-body: #2d283e;
 }
 
 main {

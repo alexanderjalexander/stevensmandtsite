@@ -1,6 +1,6 @@
 'use client';
 
-import {createTheme, MantineColorsTuple} from '@mantine/core';
+import {AppShell, createTheme, MantineColorsTuple} from '@mantine/core';
 
 // Base for Reference: #2d283e
 
@@ -23,5 +23,5 @@ export const theme = createTheme({
     primaryColor: 'site-theme',
     colors: {
         'site-theme': myColor
-    },
+    }
 });
