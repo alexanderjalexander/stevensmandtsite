@@ -152,7 +152,7 @@ interface OpportunityCardProps {
 
 function OpportunityCard({name, desc, link}: OpportunityCardProps) {
     return (
-        <Card bg="262235" shadow="md" radius="lg" padding="lg">
+        <Card bg="#262235" shadow="md" radius="lg" padding="lg">
             <h2 className={classes.title}>{name}</h2>
             <Text>{desc}</Text>
             <Link href={link}>Read More</Link>
@@ -192,7 +192,7 @@ interface ReleasesCardProps {
 
 function ReleasesCard({title, artist, image, link}: ReleasesCardProps) {
     return (
-        <Card bg="262235" shadow="md" radius="lg" padding="lg">
+        <Card bg="#262235" shadow="md" radius="lg" padding="lg">
             <Card.Section pb="md">
                 <Image src={image}
                     h="100%"
