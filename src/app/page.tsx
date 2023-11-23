@@ -5,7 +5,7 @@ import Image from "next/image"
 export default function Page() {
     return (
         <div>
-            <Header text="Music & Tech" />
+            <Header text="Music & Tech"/>
             <main>
                 <div>
                     <h1>Upcoming Events</h1>

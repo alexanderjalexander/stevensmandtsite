@@ -1,4 +1,25 @@
+.header_paper {
+    background-size: cover;
+    background-position-y: 50%;
+    background-color: #191528;
+    background-image: url(/cover.png);
+    background-blend-mode: color-dodge;
+    padding-top: 10%;
+    padding-bottom: 2.5%;
+}
+
+.header_paper_container {
+    margin: auto;
+    max-width: var(--maxw_body);
+}
+
 .header_text {
     color: #03cba4;
     font-size: min(100px, max(1rem, 10vw));
+    line-height: min(100px, max(1rem, 10vw));
+    margin-bottom: 0;
+}
+
+.header_desc {
+    margin: 0;
 }
