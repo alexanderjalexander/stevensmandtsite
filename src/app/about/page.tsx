@@ -1,9 +1,11 @@
+import Header from "@/components/Header/header";
+
 export default function Page() {
     return (
-        <main>
-            <div>
-                <h1>About</h1>
-            </div>
-        </main>
+        <div>
+            <Header text="About M&T"/>
+            <main>
+            </main>
+        </div>
     )
 }

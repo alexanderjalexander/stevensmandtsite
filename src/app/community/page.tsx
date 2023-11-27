@@ -1,9 +1,12 @@
+import Header from "@/components/Header/header";
+
 export default function Page() {
     return (
-        <main>
-            <div>
-                <h1>Community</h1>
-            </div>
-        </main>
+        // TODO: Need to implement Artists and Clubs pages as well
+        <div>
+            <Header text="Community"/>
+            <main>
+            </main>
+        </div>
     )
 }

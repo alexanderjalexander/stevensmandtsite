@@ -1,9 +1,11 @@
+import Header from "@/components/Header/header";
+
 export default function Page() {
     return (
-        <main>
-            <div>
-                <h1>Resources</h1>
-            </div>
-        </main>
+        <div>
+            <Header text="Resources"/>
+            <main>
+            </main>
+        </div>
     )
 }
