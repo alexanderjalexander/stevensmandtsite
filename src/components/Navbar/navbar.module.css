@@ -31,6 +31,13 @@
     align-self: flex-start;
 }
 
+.menu_links {
+    display: block;
+    text-decoration: none;
+    text-decoration-color: white;
+    color: white;
+}
+
 .links {
     text-decoration: none;
     text-decoration-color: white;
