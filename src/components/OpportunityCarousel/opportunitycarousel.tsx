@@ -84,6 +84,7 @@ interface EventCardProps {
 }
 
 function EventCard({image, name, desc, time, date, location}: EventCardProps) {
+    // TODO: Figure out sizing issues on mobile
     return (
         <Card bg="#564f70" shadow="md" radius="lg" padding="lg">
             <Card.Section>
@@ -191,6 +192,7 @@ interface ReleasesCardProps {
 }
 
 function ReleasesCard({title, artist, image, link}: ReleasesCardProps) {
+    // TODO: Figure out sizing issues on mobile
     return (
         <Card bg="#262235" shadow="md" radius="lg" padding="lg">
             <Card.Section pb="md">
