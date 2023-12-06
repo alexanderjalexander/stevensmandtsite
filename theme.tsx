@@ -21,5 +21,7 @@ export const theme = createTheme({
     /* Put your theme override here */
     colors: {
         myColor
-    }
+    },
+    primaryShade: 6,
+    primaryColor: 'myColor'
 });
