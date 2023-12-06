@@ -4,8 +4,7 @@ import '@mantine/carousel/styles.css';
 import classes from './opportunitycarousel.module.css';
 
 import {Carousel} from "@mantine/carousel";
-import {Paper, Text, Image, Title, useMantineTheme, rem, Card, Flex, Button} from '@mantine/core';
-import {useMediaQuery} from "@mantine/hooks";
+import {Paper, Text, Image, Title, Card, Flex, Button} from '@mantine/core';
 import Link from "next/link";
 
 // TODO: Implement Google Sheets API or some database of the sort to control events/opportunities/artists
@@ -84,7 +83,6 @@ interface EventCardProps {
 }
 
 function EventCard({image, name, desc, time, date, location}: EventCardProps) {
-    // TODO: Figure out sizing issues on mobile
     return (
         <Card bg="#564f70" shadow="md" radius="lg" padding="lg">
             <Card.Section>
@@ -124,8 +122,8 @@ function EventCard({image, name, desc, time, date, location}: EventCardProps) {
 }
 
 export function EventCardsCarousel() {
-    const theme = useMantineTheme();
-    const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
+    // const theme = useMantineTheme();
+    // const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
     const slides = events.map((item) => (
         <Carousel.Slide key={item.name}>
             <EventCard {...item} />
@@ -134,11 +132,11 @@ export function EventCardsCarousel() {
 
     return (
         <Carousel
-            slideSize={{base: '25%', sm: '25%'}}
-            slideGap={{base: rem(2), sm: 'xl'}}
+            slideSize={{base: '80%', sm: '50%'}}
+            slideGap={{base: 'md'}}
             loop
             align="center"
-            slidesToScroll={mobile ? 1 : 2}
+            slidesToScroll={1}
         >
             {slides}
         </Carousel>
@@ -162,25 +160,20 @@ function OpportunityCard({name, desc, link}: OpportunityCardProps) {
 }
 
 export function OpportunityCardsCarousel() {
-    const theme = useMantineTheme();
-    const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
     const slides = opportunities.map((item) => (
-        <Carousel.Slide key={item.name}>
-            <OpportunityCard {...item} />
-        </Carousel.Slide>
+        <OpportunityCard key={item.name} {...item} />
     ));
 
     return (
-        <Carousel
-            slideSize={{base: '25%', sm: '25%'}}
-            slideGap={{base: rem(2), sm: 'xl'}}
-            loop
-            orientation="vertical"
-            align="center"
-            slidesToScroll={mobile ? 1 : 2}
-        >
+        <Flex   justify="space-between"
+                w="100%"
+                align="center"
+                direction="column"
+                gap="md"
+                wrap="wrap"
+                mt="auto">
             {slides}
-        </Carousel>
+        </Flex>
     );
 }
 
@@ -192,7 +185,6 @@ interface ReleasesCardProps {
 }
 
 function ReleasesCard({title, artist, image, link}: ReleasesCardProps) {
-    // TODO: Figure out sizing issues on mobile
     return (
         <Card bg="#262235" shadow="md" radius="lg" padding="lg">
             <Card.Section pb="md">
@@ -206,8 +198,8 @@ function ReleasesCard({title, artist, image, link}: ReleasesCardProps) {
                   wrap="nowrap"
                   mt="auto">
                 <Flex align="flex-start" direction="column">
-                    <Text>{title}</Text>
-                    <Text>{artist}</Text>
+                    <Text><b><i>{title}</i></b></Text>
+                    <Text>- {artist}</Text>
                 </Flex>
                 <Button
                     component={Link}
@@ -220,8 +212,8 @@ function ReleasesCard({title, artist, image, link}: ReleasesCardProps) {
 }
 
 export function ReleasesCardsCarousel() {
-    const theme = useMantineTheme();
-    const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
+    // const theme = useMantineTheme();
+    // const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
     const slides = releases.map((item) => (
         <Carousel.Slide key={item.title}>
             <ReleasesCard {...item} />
@@ -230,11 +222,11 @@ export function ReleasesCardsCarousel() {
 
     return (
         <Carousel
-            slideSize={{base: '25%', sm: '25%'}}
-            slideGap={{base: rem(2), sm: 'xl'}}
+            slideSize={{base: '50%', sm: '25%'}}
+            slideGap={{base: 'md'}}
             loop
             align="center"
-            slidesToScroll={mobile ? 1 : 2}
+            slidesToScroll={1}
         >
             {slides}
         </Carousel>
