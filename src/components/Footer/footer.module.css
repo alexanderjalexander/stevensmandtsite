@@ -1,6 +1,7 @@
 .footer_base {
     display: flex;
-    position: static;
+    /* TODO: Figure out if it's possible to have it be *either* on the bottom of the page, or at the bottom of the container always */
+    position: sticky;
     bottom: 0;
     justify-content: space-around;
     margin: auto;
@@ -8,6 +9,7 @@
     width: 100%;
     max-width: 100%;
     background-color: #191528;
+    z-index: 10;
 }
 
 .footer_link {
