@@ -38,6 +38,14 @@
     color: white;
 }
 
+.menu_sublinks {
+    margin-left: 32px;
+    display: block;
+    text-decoration: none;
+    text-decoration-color: white;
+    color: white;
+}
+
 .links {
     text-decoration: none;
     text-decoration-color: white;

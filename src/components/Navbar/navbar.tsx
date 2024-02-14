@@ -2,27 +2,73 @@
 
 import Link from "next/link"
 import styles from "./navbar.module.css"
-import {Burger, Drawer, Flex, Group, UnstyledButton} from "@mantine/core";
+import {Burger, Drawer, Flex, Group, HoverCard} from "@mantine/core";
 import {useDisclosure} from "@mantine/hooks";
-
-const links = [
-    { link: '/', label: 'Home' },
-    { link: '/studiobooking', label: 'Studio Booking' },
-    { link: '/community', label: 'Community' },
-    { link: '/directory', label: 'Directory' },
-    { link: '/resources', label: 'Resources' },
-    { link: '/about', label: 'About' },
-];
+import {links} from "@/config/siteconfig";
 
 export function Navbar() {
     const [menu_opened, { toggle:menu_toggle, close:close_menu }] = useDisclosure(false);
 
-    const items = links.map((link) => (
-        <Link href={link.link} key={link.label} className={styles.links}> {link.label} </Link>
-    ));
+    const items = links.map((link) =>
+        link.children === undefined ? (
+            <Link href={link.link}
+                  key={link.label}
+                  className={styles.links}>
+                {link.label}
+            </Link>
+        ) : (
+            <HoverCard key={link.label}>
+                <HoverCard.Target>
+                    <Link href={link.link}
+                          className={styles.links}>
+                        {link.label}
+                    </Link>
+                </HoverCard.Target>
+                <HoverCard.Dropdown>
+                    {link.children.map((sublink) =>
+                        <Link href={sublink.link}
+                              key={sublink.label}
+                              className={styles.links}>
+                            {sublink.label}
+                        </Link>
+                    )}
+                </HoverCard.Dropdown>
+            </HoverCard>
+        )
+    );
 
     const menu_items = links.map((link) => (
-        <Link href={link.link} key={link.label} onClick={close_menu} className={styles.menu_links}> {link.label} </Link>
+        link.children === undefined ? (
+            <Link href={link.link}
+                  key={link.label}
+                  onClick={close_menu}
+                  className={styles.menu_links}>
+                {link.label}
+            </Link>
+        ) : (
+            <Link href={link.link}
+                  key={link.label}
+                  onClick={close_menu}
+                  className={styles.menu_links}>
+                {link.label}
+                <Flex
+                    gap="md"
+                    justify="flex-start"
+                    align="flex-start"
+                    direction="column">
+                    {link.children.map(
+                        (sublink) => (
+                            <Link href={sublink.link}
+                                  key={sublink.label}
+                                  onClick={close_menu}
+                                  className={styles.menu_sublinks}>
+                                &#9;{sublink.label}
+                            </Link>
+                        )
+                    )}
+                </Flex>
+            </Link>
+        )
     ));
 
     return (
