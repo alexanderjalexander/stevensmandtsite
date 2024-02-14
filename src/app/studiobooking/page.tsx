@@ -6,7 +6,7 @@ export default function Page() {
         <div>
             <Header text="Studio Booking"/>
             <main>
-                <Button m="auto" component="a" href="https://tinyurl.com/K350BookingApplication">
+                <Button m="auto" component="a" target="_blank" href="https://tinyurl.com/K350BookingApplication">
                     Book Here
                 </Button>
                 <p>Special Bookings are ONLY for professor-sanctioned ensembles (Ex. HMU 498), and Senior Thesis work. Questions about what activities are eligible for bookings can be emailed to <a href="mailto:shuashua@stevens.edu">shuashua@stevens.edu</a>. Other work (classwork, personal work, etc) can be done during open monitor hours.</p>
