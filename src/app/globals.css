@@ -9,5 +9,6 @@ main {
   max-width: var(--maxw_body);
   color: white;
   margin: auto;
-  padding: 50px 0;
+  padding-top: 32px;
+  padding-bottom: 80px;
 }
