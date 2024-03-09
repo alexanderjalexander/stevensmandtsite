@@ -7,21 +7,9 @@
     /*min-height: 75vh;*/
 }
 
-.header_paper_container {
-    position: static;
-    padding-bottom: 32px;
-    padding-top: 50vh;
-    padding-left: 32px;
-    padding-right: 32px;
-}
-
 .header_text {
     color: #03cba4;
     font-size: min(100px, max(1rem, 10vw));
     line-height: min(100px, max(1rem, 10vw));
-    margin: 0;
-}
-
-.header_desc {
     margin: 0;
 }

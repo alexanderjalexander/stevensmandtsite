@@ -26,7 +26,7 @@ export function Navbar() {
                 </HoverCard.Target>
                 <HoverCard.Dropdown>
                     {link.children.map((sublink) =>
-                        <Link href={sublink.link}
+                        <Link href={link.link + sublink.link}
                               key={sublink.label}
                               className={styles.links}>
                             {sublink.label}
@@ -52,16 +52,18 @@ export function Navbar() {
                   className={styles.menu_links}>
                 {link.label}
                 <Flex
-                    gap="md"
+                    gap="lg"
                     justify="flex-start"
                     align="flex-start"
-                    direction="column">
+                    direction="column"
+                    className="pt-5">
                     {link.children.map(
                         (sublink) => (
-                            <Link href={sublink.link}
-                                  key={sublink.label}
-                                  onClick={close_menu}
-                                  className={styles.menu_sublinks}>
+                            <Link
+                                href={link.link + sublink.link}
+                                key={sublink.label}
+                                onClick={close_menu}
+                                className={styles.menu_sublinks}>
                                 &#9;{sublink.label}
                             </Link>
                         )
@@ -99,7 +101,7 @@ export function Navbar() {
                     hiddenFrom="sm"
                 >
                     <Flex
-                        gap="md"
+                        gap="lg"
                         justify="flex-start"
                         align="flex-start"
                         direction="column">

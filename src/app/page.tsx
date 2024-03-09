@@ -1,6 +1,5 @@
-import {EventCardsCarousel, OpportunityCardsCarousel, ReleasesCardsCarousel} from "@/components/OpportunityCarousel/opportunitycarousel";
+import {EventCardsCarousel, OpportunityCardsCarousel, ReleasesCardsCarousel} from "@/components/opportunitycarousel";
 import Header from "@/components/Header/header";
-import Image from "next/image"
 
 export default function Page() {
     return (
@@ -12,12 +11,12 @@ export default function Page() {
                     <EventCardsCarousel />
                 </div>
 
-                <div>
+                <div className="pt-8">
                     <h1>Opportunities</h1>
                     <OpportunityCardsCarousel />
                 </div>
 
-                <div>
+                <div className="pt-8">
                     <h1>New Releases</h1>
                     <p>Explore music created by the Music and Technology community at Stevens.</p>
                     <ReleasesCardsCarousel />

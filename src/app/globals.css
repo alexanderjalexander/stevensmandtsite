@@ -1,8 +1,15 @@
+/* Importing Base Styles breaks a whole thing  */
+/*@import "tailwindcss/base";*/
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 body {
   /*background-color: #2d283e;*/
   --maxw: min(90%, 1500px);
   --maxw_body: min(85%, 1300px);
   --mantine-color-body: #2d283e;
+  --dark-bg: #191528;
+  --header-color: #03cba4;
 }
 
 main {

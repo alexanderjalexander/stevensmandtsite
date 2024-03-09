@@ -1,12 +1,11 @@
-import styles from './footer.module.css'
 import Link from "next/link";
 
 export function Footer() {
     return (
-        <div className={styles.footer_base}>
-            <Link className={styles.footer_link} href="/">CONTACT</Link>
-            <Link className={styles.footer_link} href="/">INSTAGRAM</Link>
-            <Link className={styles.footer_link} href="/">YOUTUBE</Link>
+        <div className="flex fixed bottom-0 justify-around m-auto px-4 py-4 w-full max-w-full bg-[var(--dark-bg)] z-50">
+            <Link className="no-underline font-bold text-white" href="/">CONTACT</Link>
+            <Link className="no-underline font-bold text-white" href="/">INSTAGRAM</Link>
+            <Link className="no-underline font-bold text-white" href="/">YOUTUBE</Link>
         </div>
     )
 }

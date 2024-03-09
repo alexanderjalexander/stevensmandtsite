@@ -1,7 +1,3 @@
-.logo {
-    margin: auto;
-}
-
 .navbar {
     /*max-width: var(--maxw);*/
     margin: auto;
@@ -10,7 +6,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 9999999;
+    z-index: 250;
     background-color: #191528;
 }
 
@@ -61,18 +57,4 @@
     align-content: center;
     margin-right: auto;
     /*padding: 0 10%;*/
-}
-
-.autocomplete {
-    background-color: #fff0;
-    text-decoration-color: white;
-    opacity: 1;
-    color: white;
-    margin: auto;
-}
-
-.input {
-    background-color: #fff0;
-    text-decoration-color: white;
-    color: white;
 }
